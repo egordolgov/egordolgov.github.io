@@ -103,19 +103,41 @@ h1 {
 
 /* SOCIAL ICONS */
 .social {
-    margin: 3rem auto; max-width: 900px;
-    display: flex; justify-content: center; gap: 2.5rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
 }
-.social a {
-    text-decoration: none; color: #2c3e50;
-    font-size: 1rem; display: flex; flex-direction: column; align-items: center;
+
+/* Shared styles for button & links */
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #2c3e50;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem 0.75rem;
+    text-decoration: none;
+    transition: color 0.2s ease, background 0.2s ease;
+    border-radius: 4px;
 }
-.social a i {
-    font-size: 1.75rem; margin-bottom: 0.5rem;
+
+/* Extra width for the email toggler */
+.social-email {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
 }
-.social a:hover i,
-.social a:hover span {
+
+/* Hover/focus for all items */
+.social-item:hover,
+.social-item:focus {
     color: #2980b9;
+    background: rgba(41, 128, 185, 0.1);
+    outline: none;
 }
 
 /* RESPONSIVE */

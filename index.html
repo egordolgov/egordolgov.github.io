@@ -62,16 +62,42 @@
 <!-- LINKS / ICONS -->
 <!-- fun Unicode icons, no Scholar cap -->
 <section class="social">
-    <a href="mailto:egor@mail.utoronto.ca" title="Email">
-        📧 Email
-    </a>
-    <a href="https://github.com/egor-dolgov" target="_blank" rel="noopener" title="GitHub">
+    <!-- Email is now a button with .social-item like the links -->
+    <button id="email-btn" class="social-item social-email">
+        📧 <span class="email-label">Email</span>
+    </button>
+
+    <!-- GitHub & LinkedIn also get .social-item -->
+    <a href="https://github.com/egor-dolgov"
+       class="social-item"
+       target="_blank"
+       rel="noopener">
         🐙 GitHub
     </a>
-    <a href="https://www.linkedin.com/in/egor-dolgov" target="_blank" rel="noopener" title="LinkedIn">
+    <a href="https://www.linkedin.com/in/egor-dolgov"
+       class="social-item"
+       target="_blank"
+       rel="noopener">
         🔗 LinkedIn
     </a>
 </section>
+
+
+<script>
+    const btn = document.getElementById('email-btn');
+    const label = btn.querySelector('.email-label');
+    const EMAIL = 'egor@mail.utoronto.ca';
+    const BUTTON_TEXT = 'Email';
+
+    btn.addEventListener('click', () => {
+        if (label.innerText === BUTTON_TEXT) {
+            label.innerText = EMAIL;
+        } else {
+            label.innerText = BUTTON_TEXT;
+        }
+    });
+</script>
+
 
 
 
